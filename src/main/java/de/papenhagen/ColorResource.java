@@ -19,7 +19,6 @@ public class ColorResource {
     @Inject
     private ColorConvertorService colorConvertorService;
 
-    //testing http://localhost:8080/color?red=20&green=254&blue=53
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Output colorPicker(@QueryParam(value = "red") final Integer red,
