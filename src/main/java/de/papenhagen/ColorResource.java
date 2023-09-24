@@ -26,9 +26,9 @@ public class ColorResource {
                               @QueryParam(value = "blue") final Integer blue) {
 
 
-        final int colorR = getColor(red);
-        final int colorG = getColor(green);
-        final int colorB = getColor(blue);
+        final int colorR = getValidColorValueInRGBSpace(red);
+        final int colorG = getValidColorValueInRGBSpace(green);
+        final int colorB = getValidColorValueInRGBSpace(blue);
 
         final Color rgb = new RGB(colorR, colorG, colorB);
         final Color cmyk = colorConvertorService.convertRGBtoCMYK(rgb);
@@ -39,7 +39,7 @@ public class ColorResource {
     }
 
 
-    private int getColor(final Integer color) {
+    private int getValidColorValueInRGBSpace(final Integer color) {
         if (isNull(color)) {
             return 0;
         }
