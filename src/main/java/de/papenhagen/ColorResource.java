@@ -50,5 +50,5 @@ public class ColorResource {
         return color;
     }
 
-    public record Output(List<Color> colors) { };
+    public record Output(List<Color> colors) { }
 }
