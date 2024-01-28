@@ -122,8 +122,6 @@
                 <requireJavaVersion>
                   <version>[21,)</version>
                 </requireJavaVersion>
-              </rules>
-              <rules>
                 <requireReleaseVersion>
                   <message>No Snapshots Allowed!</message>
                 </requireReleaseVersion>
